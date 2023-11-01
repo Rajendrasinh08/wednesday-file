@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <a href="#"><img src="images/image3.png" alt=""></a>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                        <span id="sp1"></span>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <div class="sicons">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="icons">
+                <div class="sicons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="shop">
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <button><a href="#">LET'S TALK</a></button>
+                <div class="bars">
+                    <a href="#"><i class="fa fa-bars"></i></a>
+                </div>
+            </div>
+
+        </div>
+        <div class="hero">
+            <h3>FREELANCE DIGITAL DESIGNER</h3>
+            <H1>
+                Hello I'm <span>Nancy</span>
+                Welcome to my
+                world.
+            </H1>
+        </div>
+    </div>
+    <section class="about">
+        <div class="about-main">
+            <div class="about-img">
+                <img src="images/about-8.jpg" alt="">
+            </div>
+            <div class="about-info">
+                <h2>About Me</h2>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    <span>alteration</span> in some form, by injected humour, or randomised words which dont look even
+                    slightly believable. If you are going to use a passage of Lorem Ipsum,</p>
+                <ul>
+                    <li id="navtab1"><a href="#tab1">Main skills</a></li>
+                    <li id="navtab2"><a href="#tab2">Awards</a></li>
+                    <li id="navtab3"><a href="#tab3">Experience</a></li>
+                    <li id="navtab4"><a href="#tab4">Education & Certification</a></li>
+                </ul>
+                <div class="tabs">
+                    <div class="tab1" id="tab1">
+                        <h3>User experience design - UI/UX</h3>
+                        <p>Delight the user and make it work</p>
+                        <h3>Web and user interface design - Development</h3>
+                        <p>Websites, web experiences, ...</p>
+                        <h3>Interaction design - Animation</h3>
+                        <p>I like to move it move it.</p>
+                    </div>
+                    <div class="tab2" id="tab2">
+                        <h3>Awwwards.com - Winner</h3>
+                        <p> 2019 - 2020</p>
+                        <h3>CSS Design Awards - Winner</h3>
+                        <p> 2017 - 2018</p>
+                        <h3>Design nominees - site of the day</h3>
+                        <p>2013- 2014</p>
+                    </div>
+                    <div class="tab3" id="tab3">
+                        <h3>Sr. Front-end Engineer - Google</h3>
+                        <p>2018 - Current</p>
+                        <h3>Front-end Engineer - Microsoft</h3>
+                        <p>2017 - 2018</p>
+                        <h3>Software Engineer - Alibaba</h3>
+                        <p> 2013- 2014</p>
+                    </div>
+                    <div class="tab4" id="tab4">
+                        <h3>BSc In CSE - ABC University, Los Angeles, CA</h3>
+                        <p>2010</p>
+                        <h3>Diploma in Computer Science - Gamma Technical Institute</h3>
+                        <p>2009</p>
+                        <h3>Graphic Designer - ABC Institute, Los Angeles, CA</h3>
+                        <p>2007</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        let bars = document.querySelector(".bars");
+        let menu = document.querySelector("ul");
+        bars.addEventListener("click", function () {
+            menu.classList.toggle("show");
+        })
+
+        let navtab1 = document.querySelector("#navtab1");
+        let navtab2 = document.querySelector("#navtab2");
+        let navtab3 = document.querySelector("#navtab3");
+        let navtab4 = document.querySelector("#navtab4");
+        let tab1 = document.querySelector("#tab1");
+        let tab2 = document.querySelector("#tab2");
+        let tab3 = document.querySelector("#tab3");
+        let tab4 = document.querySelector("#tab4");
+
+        navtab1.addEventListener("click", () => {
+            navtab1.style.color = "#ff006a";
+            tab1.style.display = "block";
+            tab2.style.display = "none";
+            tab3.style.display = "none";
+            tab4.style.display = "none";
+        });
+
+        navtab2.addEventListener("click", ()=>{
+            tab1.style.display = "none";
+            tab2.style.display = "block";
+            tab3.style.display = "none";
+            tab4.style.display = "none";
+        });
+        navtab3.addEventListener("click", () => {
+            tab1.style.display = "none";
+            tab2.style.display = "none";
+            tab3.style.display = "block";
+            tab4.style.display = "none";
+        });
+        navtab4.addEventListener("click", () => {
+            tab1.style.display = "none";
+            tab2.style.display = "none";
+            tab3.style.display = "none";
+            tab4.style.display = "block";
+        });
+
+        // Add event listeners for navtab3 and navtab4 similarly.
+
+    </script>
+</body>
+
+</html>

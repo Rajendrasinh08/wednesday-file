@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --primary :#ff006ad8;
+}
+.container
+{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(images/image1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.container .header
+{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4%;
+    position: relative;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+
+}
+.header .logo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.container .logo a img
+{
+    height: 60px; 
+}
+
+.logo ul li
+{
+    list-style: none;
+    display: inline-block;
+    padding: 0 15px;
+}
+.logo ul li a
+{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.5s;
+    left: 0;
+    position: relative;
+}
+#sp1
+{
+   position: absolute;
+   height: 3px;
+   width: 0;
+   background-color: red;
+   top: 55px;
+   left: 157px;
+   transition: 0.5s ease-in-out;
+}
+.logo ul li:hover #sp1
+{
+    width: 55px;
+
+}
+.logo ul li a:hover
+{
+    /* border-bottom: 3px solid  red; */
+    color: red;
+
+}
+.logo ul li .sicons
+{
+    display: none;
+}
+.logo ul li .sicons a
+{
+    margin-right: 10px;
+
+}
+.icons 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.icons .sicons a
+{
+    padding: 0 10px;
+}
+.icons .sicons a i
+{
+    color: white;
+    font-size: 1.1rem;
+    transition: 0.2s;
+}
+.icons .sicons a i:hover 
+{
+    color: red;
+}
+.icons .shop a i
+{
+    color: white;
+    font-size: 1.1rem;
+    transition: 0.2s;
+}
+.icons .shop a i:hover
+{
+  color: red;
+}
+.icons button
+{
+    width: 110px;
+    height: 40px;
+    background-color: black;
+    border: 3px solid rgba(44, 43, 43, 0.705);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.icons button a
+{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+.icons button:hover
+{
+    background-color: var(--primary);
+}
+.bars
+{
+    display: none;
+}
+.bars a i
+{
+    font-size: 2rem;
+    color: white;
+}
+
+.container .hero
+{ 
+   height: 100vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 4%;
+}
+.hero h3
+{
+    color: rgba(255, 255, 255, 0.718);
+    margin-bottom: 20px;
+}
+.hero h1
+{
+    color: white;
+    font-size: 4.2rem;
+    font-weight: 700;
+}
+.hero h1 span
+{
+  color: var(--primary);
+}
+.about{
+    background-color: #191919;
+}
+.about-main{
+    padding: 100px 4%;
+    display: flex;
+    justify-content: space-between;
+}
+.about-img{
+    width: 40%;
+}
+.about-img img{
+    width: 100%;
+}
+.about-info{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+.about-info h2{
+    font-size: 3.5rem;
+}
+.about-info p{
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.591);
+    font-weight: 200;
+    margin-bottom: 25px;
+}
+.about-info p span{
+    color: white;
+    font-weight: 700;
+}
+.about-info ul{
+    margin-top: 25px;
+}
+.about-info ul li{
+    font-size: 20px;
+    font-weight: 700;
+    display: inline-block;
+    margin-right: 20px;
+}
+.about-info ul li a{
+    position: relative;
+    color: white;
+}
+.about-info ul li a:after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 10%;
+    top: 100%;
+    left: 0%;
+    background-color: white;
+    transition: all 0.5s;
+}
+.about-info ul{
+    margin-bottom: 30px;
+}
+.about-info ul li a:hover:after{
+    width: 100%;
+}
+.tabs{
+    color: rgba(255, 255, 255, 0.569);
+}
+.tabs h3:hover{
+    color: var(--primary);
+    cursor: pointer;
+}
+.tab2,.tab3,.tab4{
+    display: none;
+}
+@media (max-width:1100px)
+{
+
+ ul
+ {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: -100%;
+    background-color: rgba(255, 255, 255, 0.569);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--primary);
+   padding: 15px 0px;
+   transition: 0.5s;
+   /* display: none; */
+ } 
+ ul li
+ {
+    display: block;
+    padding: 10px 0px;
+    padding-left: 4%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.404);
+   
+ }
+ ul :last-child{
+    border-bottom: none;
+ }
+ .bars
+ {
+    display: block;
+ }
+ ul li .sicons
+ {
+    display: block;
+ }
+ .icons .sicons
+ {
+    display: none;
+ }
+ .show
+ {
+    left: 0;
+ }
+}
+@media (max-width:768px)
+{
+    .container .hero
+    {
+        width: 100%;
+    }
+}
+@media(max-width:900px)
+{
+    .container
+    {
+      position: relative;
+    }
+    .container:after{
+     position: absolute;
+     content: "";
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     background-color: rgba(0, 0, 0, 0.506);
+     z-index: 0;
+    }
+    .container .hero
+    {
+        position: relative;
+        z-index: 1;
+    }
+}
